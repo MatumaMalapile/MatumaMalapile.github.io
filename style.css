@@ -80,7 +80,13 @@ main {
 }
 
 main h1 {
-    font-size: 2.5rem;
+    font-size: 4rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+main h2 {
+    font-size: 2rem;
     color: #2c3e50;
     margin-bottom: 1rem;
 }
@@ -119,7 +125,7 @@ main p1 {
 }
 
 /* Get in Touch Section */
-main h2 {
+main h3 {
     display: inline-block;
     background: linear-gradient(135deg, #e169f5, #a855f7);
     color: white;
@@ -133,12 +139,12 @@ main h2 {
     cursor: pointer;
 }
 
-main h2:hover {
+main h3:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(168, 85, 247, 0.4);
 }
 
-main h2::after {
+main h3::after {
     content: ' →';
     margin-left: 0.3rem;
 }
