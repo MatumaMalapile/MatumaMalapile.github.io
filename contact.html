@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - MY PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Success Message Popup */
+        .success-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, #e169f5, #a855f7);
+            color: white;
+            padding: 2rem 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            text-align: center;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        .success-popup.show {
+            display: block;
+        }
+
+        .success-popup h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .success-popup p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .success-popup .checkmark {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translate(-50%, -60%);
+                opacity: 0;
+            }
+            to {
+                transform: translate(-50%, -50%);
+                opacity: 1;
+            }
+        }
+
+        /* Overlay for popup */
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .popup-overlay.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="portfolio-nav"> 
+        <img src="/images/me.png" alt="Profile Picture">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="Portfolio.html">PORTFOLIO</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="Experience.html">EXPERIENCE</a></li>
+            <li><a href="contact.html" class="active">CONTACT</a></li>
+        </ul>
+    </nav>
+
+   <br>
+        <!-- Contact Header -->
+        <h1 class="contact-title">Let's Work Together</h1>
+        <p class="contact-subtitle">
+            Have a project in mind? Want to collaborate? Or just want to say hello? 
+            I'd love to hear from you. Fill out the form or reach out directly through any of the channels below.
+        </p>
+        
+     <div class="contact-container">
+        <!-- Contact Content -->
+        <div class="contact-content">
+            <!-- Contact Form -->
+            <div class="contact-form-section">
+                <h2>Send Me a Message</h2>
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="username@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" required>
+                            <option value="" disabled selected>Select a subject</option>
+                            <option value="query">General Query</option>
+                            <option value="ui-ux-design">UI/UX Design Services</option>
+                            <option value="web-development">Web Development Services</option>
+                            <option value="app-development">Application Development Services</option>
+                            <option value="business-branding">Business Branding Services</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project or inquiry..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact-info-section">
+                <!-- Contact Details Card -->
+                <div class="contact-info-card">
+                    <h2>Get In Touch</h2>
+                    <p>
+                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-detail-item">
+                            <strong>Email:</strong>
+                            <a href="mailto:matuma469@gmail.com">matuma469@gmail.com</a>
+                        </div>
+                        <div class="contact-detail-item">
+                            <strong>Location:</strong>
+                            <span>Cape Town, South Africa</span>
+                        </div>
+                        <div class="contact-detail-item">
+                            <strong>Status:</strong>
+                            <span>Available for Projects</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media Card -->
+                <div class="contact-info-card">
+                    <h2>Connect With Me</h2>
+                    <p>
+                        Follow me on social media or connect with me on professional networks. 
+                        Let's stay in touch and build something great together!
+                    </p>
+                    <div class="contact-social-links">
+                        <a href="https://www.linkedin.com/in/matuma-malapile-b3aa69199" target="_blank" title="LinkedIn">
+                            <img src="/images/in.png" alt="LinkedIn">
+                        </a>
+                        <a href="https://github.com/MatumaMalapile" target="_blank" title="GitHub">
+                            <img src="/images/github.png" alt="GitHub">
+                        </a>
+                        <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" title="Email">
+                            <img src="/images/email.png" alt="Email">
+                        </a>
+                        <a href="https://www.instagram.com/YOUR_USERNAME" target="_blank" title="Instagram">
+                            <img src="/images/insta.png" alt="Instagram">
+                        </a>
+                        <a href="https://whatsapp.com/dl/" target="_blank" title="WhatsApp">
+                            <img src="/images/whats.png" alt="WhatsApp">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Popup -->
+    <div class="popup-overlay" id="popupOverlay"></div>
+    <div class="success-popup" id="successPopup">
+        <div class="checkmark">✓</div>
+        <h3>Message Sent Successfully!</h3>
+        <p>Thank you for reaching out. I'll get back to you soon.</p>
+    </div>
+
+    <footer>
+        <p1>@Matt_matuma</p1>
+        <p2>The only way to do great work is to love what you do</p2>
+    </footer>
+
+    <script>
+        const form = document.getElementById('contactForm');
+        const successPopup = document.getElementById('successPopup');
+        const popupOverlay = document.getElementById('popupOverlay');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(form);
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Clear the form
+                    form.reset();
+                    
+                    // Show success popup
+                    popupOverlay.classList.add('show');
+                    successPopup.classList.add('show');
+                    
+                    // Hide popup after 3 seconds
+                    setTimeout(() => {
+                        popupOverlay.classList.remove('show');
+                        successPopup.classList.remove('show');
+                    }, 3000);
+                } else {
+                    alert('Oops! There was a problem sending your message. Please try again or email me directly.');
+                }
+            } catch (error) {
+                alert('Oops! There was a problem sending your message. Please try again or email me directly.');
+            }
+        });
+
+        // Close popup when clicking overlay
+        popupOverlay.addEventListener('click', function() {
+            popupOverlay.classList.remove('show');
+            successPopup.classList.remove('show');
+        });
+    </script>
+
+</body>
+</html>
